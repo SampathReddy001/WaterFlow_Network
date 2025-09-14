@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Network Visualization</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    svg { border: 1px solid #ccc; }
+    circle {
+      fill: steelblue;
+      stroke: black;
+      stroke-width: 1px;
+      cursor: pointer;
+    }
+    line.edge {
+      stroke: rgb(232,232,19);
+      stroke-width: 2px;
+      marker-end: url(#arrow);
+      cursor: pointer;
+    }
+    text {
+      font-size: 10px;
+      fill: black;
+    }
+    .tooltip {
+      position: absolute;
+      background: navy;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      pointer-events: none;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <h2>Node + Edge Network</h2>
+  <svg id="chart" width="1000" height="700"></svg>
+  <div id="tooltip" class="tooltip"></div>
+  <script src="script.js"></script>
+</body>
+</html>
